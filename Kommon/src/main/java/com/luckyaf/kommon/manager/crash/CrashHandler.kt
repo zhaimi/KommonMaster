@@ -4,7 +4,7 @@ import android.content.Context
 import com.luckyaf.kommon.manager.ActivityManager
 import com.luckyaf.kommon.utils.LogUtil
 import android.os.Looper
-import android.support.v7.app.AlertDialog
+import androidx.appcompat.app.AlertDialog
 
 
 /**

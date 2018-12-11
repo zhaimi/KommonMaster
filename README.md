@@ -1,7 +1,6 @@
 # KommonMaster
 
 
-## kotlin 公用库
+## kotlin 公用库 android x 版本
 
 
-> compile 'com.luckyaf:kommon:0.0.5'

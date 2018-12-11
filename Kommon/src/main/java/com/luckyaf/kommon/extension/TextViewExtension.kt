@@ -1,6 +1,6 @@
 package com.luckyaf.kommon.extension
 
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import android.widget.TextView
 
 /**

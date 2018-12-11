@@ -1,6 +1,6 @@
 package com.luckyaf.kommon.constants
 
-import android.support.annotation.IntDef
+import androidx.annotation.IntDef
 
 /**
  * 类描述：

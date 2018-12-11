@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.net.ConnectivityManager
-import android.support.annotation.RequiresPermission
+import androidx.annotation.RequiresPermission
 import com.luckyaf.kommon.event.NetworkChangedEvent
 import com.luckyaf.kommon.utils.NetUtil
 import org.greenrobot.eventbus.EventBus

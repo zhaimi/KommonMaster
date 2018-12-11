@@ -1,26 +1,24 @@
 package com.luckyaf.kommonmaster
 
-import android.app.NotificationChannel
-import android.app.PendingIntent
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
+import com.google.android.material.snackbar.Snackbar
 import com.luckyaf.kommon.base.BaseActivity
 import com.luckyaf.kommon.extension.aboveApi
 import com.luckyaf.kommon.extension.clickWithTrigger
+import com.luckyaf.kommon.extension.jumpTo
 import com.luckyaf.kommon.widget.popup.SmartPopup
 import com.luckyaf.kommon.widget.popup.XGravity
 import com.luckyaf.kommon.widget.popup.YGravity
-
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+
+
 import java.util.*
-import com.luckyaf.kommon.extension.jumpTo
 
 
 class MainActivity : BaseActivity() {

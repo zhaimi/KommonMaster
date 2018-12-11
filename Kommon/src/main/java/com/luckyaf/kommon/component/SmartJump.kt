@@ -2,9 +2,9 @@ package com.luckyaf.kommon.component
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
-import android.support.v4.app.FragmentManager
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
 import android.util.SparseArray
 import com.luckyaf.kommon.BuildConfig
 
@@ -14,21 +14,21 @@ import com.luckyaf.kommon.BuildConfig
  *
  */
 @Suppress("unused")
-class SmartJump private constructor(fragmentManager: FragmentManager) {
+class SmartJump private constructor(fragmentManager: androidx.fragment.app.FragmentManager) {
 
     companion object {
 
         private val TAG = BuildConfig.APPLICATION_ID + SmartJump::class.java.simpleName
 
-        fun from(activity: FragmentActivity): SmartJump {
+        fun from(activity: androidx.fragment.app.FragmentActivity): SmartJump {
             return SmartJump(activity.supportFragmentManager)
         }
 
-        fun from(fragment: Fragment): SmartJump {
+        fun from(fragment: androidx.fragment.app.Fragment): SmartJump {
             return SmartJump(fragment.childFragmentManager)
         }
 
-        fun with(fragmentManager: FragmentManager): SmartJump {
+        fun with(fragmentManager: androidx.fragment.app.FragmentManager): SmartJump {
             return SmartJump(fragmentManager)
         }
     }
@@ -59,7 +59,7 @@ class SmartJump private constructor(fragmentManager: FragmentManager) {
         resultBridgeFragment = getResultBridgeFragment(fragmentManager)
     }
 
-    private fun getResultBridgeFragment(fragmentManager: FragmentManager): ResultBridgeFragment {
+    private fun getResultBridgeFragment(fragmentManager: androidx.fragment.app.FragmentManager): ResultBridgeFragment {
         var bridgeFragment = fragmentManager.findFragmentByTag(TAG) as ResultBridgeFragment?
         if (bridgeFragment == null) {
             bridgeFragment = ResultBridgeFragment()
@@ -71,11 +71,11 @@ class SmartJump private constructor(fragmentManager: FragmentManager) {
         return bridgeFragment
     }
 
-    private fun findFragment(fragmentManager: FragmentManager): ResultBridgeFragment {
+    private fun findFragment(fragmentManager: androidx.fragment.app.FragmentManager): ResultBridgeFragment {
         return fragmentManager.findFragmentByTag(TAG) as ResultBridgeFragment
     }
 
-    class ResultBridgeFragment : Fragment() {
+    class ResultBridgeFragment : androidx.fragment.app.Fragment() {
         private val mCallbacks = SparseArray<Callback>()
         /**
          * 每次启动都会有个不同的requestCode

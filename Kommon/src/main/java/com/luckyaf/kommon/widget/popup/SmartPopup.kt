@@ -5,12 +5,12 @@ import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
-import android.support.annotation.*
-import android.support.v4.widget.PopupWindowCompat
+import androidx.core.widget.PopupWindowCompat
 import android.transition.Transition
 import android.util.Log
 import android.view.*
 import android.widget.PopupWindow
+import androidx.annotation.*
 
 /**
  * 类描述：

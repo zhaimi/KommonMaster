@@ -2,7 +2,7 @@ package com.luckyaf.kommon.utils
 
 import android.content.Context
 import android.net.ConnectivityManager
-import android.support.annotation.RequiresPermission
+import androidx.annotation.RequiresPermission
 import android.net.wifi.WifiManager
 import com.luckyaf.kommon.constants.NetState
 import java.net.InetAddress

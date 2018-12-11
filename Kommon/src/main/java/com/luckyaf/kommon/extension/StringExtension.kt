@@ -1,7 +1,7 @@
 package com.luckyaf.kommon.extension
 
 import android.graphics.Color
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import android.text.ParcelableSpan
 import android.text.SpannableString
 import android.text.Spanned

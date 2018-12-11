@@ -11,8 +11,7 @@ import android.os.Build
 import android.os.Bundle
 import com.luckyaf.kommon.base.BaseActivity
 import android.graphics.BitmapFactory
-import android.support.v4.app.NotificationCompat
-import android.view.View
+import androidx.core.app.NotificationCompat
 import android.widget.RemoteViews
 import com.luckyaf.kommon.extension.clickWithTrigger
 import kotlinx.android.synthetic.main.activity_test_notification.*

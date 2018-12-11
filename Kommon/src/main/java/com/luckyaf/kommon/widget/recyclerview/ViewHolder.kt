@@ -1,7 +1,7 @@
 package com.luckyaf.kommon.widget.recyclerview
 
 import android.annotation.SuppressLint
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.util.SparseArray
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +14,7 @@ import android.widget.TextView
  *
  */
 @Suppress("unused")
-class ViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
+class ViewHolder (itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
 
     //用于缓存已找的界面
     private var mView: SparseArray<View>?=null

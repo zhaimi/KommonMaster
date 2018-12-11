@@ -3,13 +3,13 @@ package com.luckyaf.kommon.extension
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.support.annotation.IdRes
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
-import android.support.v7.app.ActionBar
-import android.support.v7.app.AppCompatActivity
+import androidx.annotation.IdRes
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import com.luckyaf.kommon.component.SmartJump
 
 /**
@@ -21,7 +21,7 @@ import com.luckyaf.kommon.component.SmartJump
  * The `fragment` is added to the container view with id `frameId`. The operation is
  * performed by the `fragmentManager`.
  */
-fun AppCompatActivity.replaceFragmentInActivity(fragment: Fragment, frameId: Int) {
+fun AppCompatActivity.replaceFragmentInActivity(fragment: androidx.fragment.app.Fragment, frameId: Int) {
     supportFragmentManager.transact {
         replace(frameId, fragment)
     }
@@ -31,7 +31,7 @@ fun AppCompatActivity.replaceFragmentInActivity(fragment: Fragment, frameId: Int
  * The `fragment` is added to the container view with tag. The operation is
  * performed by the `fragmentManager`.
  */
-fun AppCompatActivity.addFragmentToActivity(fragment: Fragment, tag: String) {
+fun AppCompatActivity.addFragmentToActivity(fragment: androidx.fragment.app.Fragment, tag: String) {
     supportFragmentManager.transact {
         add(fragment, tag)
     }
@@ -46,14 +46,14 @@ fun AppCompatActivity.setupActionBar(@IdRes toolbarId: Int, action: ActionBar.()
 /**
  * Runs a FragmentTransaction, then calls commit().
  */
-private inline fun FragmentManager.transact(action: FragmentTransaction.() -> Unit) {
+private inline fun androidx.fragment.app.FragmentManager.transact(action: androidx.fragment.app.FragmentTransaction.() -> Unit) {
     beginTransaction().apply {
         action()
     }.commit()
 }
 
 
-inline val FragmentActivity.smartJump
+inline val androidx.fragment.app.FragmentActivity.smartJump
     get() = SmartJump.from(this)
 
 inline fun <reified T : Activity> Activity.jumpTo(params: Bundle? = null) {
@@ -62,7 +62,7 @@ inline fun <reified T : Activity> Activity.jumpTo(params: Bundle? = null) {
     startActivity(intent)
 }
 
-inline fun <reified T : Activity> FragmentActivity.jumpForResult(
+inline fun <reified T : Activity> androidx.fragment.app.FragmentActivity.jumpForResult(
         params: Bundle? = null,
         crossinline action: (Int, Intent?) -> Unit
 ) {
